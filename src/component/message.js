@@ -1,3 +1,13 @@
-export const Message = (props) => {
-  return <h1>Hello {props.name}</h1>;
+import { useState } from "react";
+
+export const Message = () => {
+  const [message, setMessage] = useState("Welcome Vistor");
+  return (
+    <div>
+      <h1>{message}</h1>
+      <button onClick={() => setMessage("Thank you for subscribing!")}>
+        Subscribe
+      </button>
+    </div>
+  );
 };
